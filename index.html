@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Housing Survey</title>
+</head>
+<body>
+    <div class="survey-wrapper">
+        <header class="survey-head">
+            <h1>Housing Survey</h1>
+            <p>Thank you for taking your time to help us with the Survey</p>
+        </header>
+        <form class="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input id="name" class="form-control" type="text" name="name" placeholder="Enter your name" required=""/>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input id="email" class="form-control" type="email" name="email" placeholder="Enter your email" required=""/>
+            </div>
+            <div class="form-group">
+                <label id="age-label" for="age">Age</label>
+                <input id="age" class="form-control" type="number" name="age" placeholder="What's your age?" min="16" max="110"/>
+            </div>
+            <div class="form-group">
+                <p>What's your occupation?</p>
+                <select id="dropdown-occupation" class="form-control" name="occupation" required="">
+                    <option disabled="" selected="" value="">Select current occupation</option>
+                    <option value="student">Student</option>
+                    <option value="intern">Intern</option>
+                    <option value="part-time">Part-time Job</option>
+                    <option value="full-time">Full-time Job</option>
+                    <option value="unemployed">Unemployed</option>
+                    <option value="uknown">Prefer Not To Say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>What's your income?</p>
+                <select id="dropdown-income" class="form-control" name="income" required="">
+                    <option disabled="" selected="" value="">Select Your Income</option>
+                    <option value="allowance">Allowance</option>
+                    <option value="0-10k">0-10000</option>
+                    <option value="10k-20k">10000-20000</option>
+                    <option value="20k-30k">20000-30000</option>
+                    <option value="30k-40k">30000-40000</option>
+                    <option value="40k-50k">40000-50000</option>
+                    <option value="unkown">Prefere Not To Say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>In what kind of house do you live in?</p>
+                <select id="dropdown-house" class="form-control" name="house" required="">
+                    <option disabled="" selected="" value="">Select House Type</option>
+                    <option value="detached">Detached</option>
+                    <option value="semi-detached">Semi-Detached House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="studio">Studio Apartment</option>
+                    <option value="villa">Villa</option>
+                    <option value="Cottage">Cottage</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Do you pay rent or have you bought it?</p>
+                <div class="radio-wrap">
+                    <label>
+                        <input class="input-radio" name="rent-bought" value="bought" type="radio" checked="">
+                        Bought
+                    </label>
+                    <label>
+                        <input  class="input-radio" name="rent-bought" value="rent" type="radio">
+                        Rent
+                    </label>
+                </div>
+             </div>
+            <div class="form-group rent">
+                <label id="rent-label" for="rent">How much rent do you pay?<span class="applicable">(If applicable)</span></label>
+                <input id="rent" class="form-control" type="number" name="rent" placeholder="Enter your rent" value="0" min="0" required=""/>
+            </div>
+            <div class="form-group bought">
+                <label id="bought-label" for="rent">How much was the house price?<span class="applicable">(If applicable)</span></label>
+                <input id="bought" class="form-control" type="number" name="bought" placeholder="Enter house price" value="0" min="0" required=""/>
+            </div>
+            <div class="form-group">
+                <label id="size-label" for="size">How big is your house?<span class="clue">(in sqm)</span></label>
+                <input id="size" class="form-control" type="number" name="size" placeholder="Enter house size" required="" min="0"/>
+            </div>
+            <div class="form-group">
+                <p>
+                    How would you like your dream house to be?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+                <div class="checkbox-wrap">
+                    <label>
+                        <input class="input-checkbox" name="dream-house" value="big" type="checkbox">
+                        Spacious
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="dream-house" value="pool" type="checkbox">
+                        Has a pool
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="dream-house" value="garden" type="checkbox">
+                        Has a garden
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="dream-house" value="garage" type="checkbox">
+                        Has a garage
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="dream-house" value="multi-storey" type="checkbox">
+                        Is multi-storey
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="dream-house" value="village" type="checkbox">
+                        Is in a village
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="dream-house" value="outskirts" type="checkbox">
+                        Is on the city outskirts
+                    </label>
+                    <label>
+                        <input class="input-checkbox" name="dream-house" value="city" type="checkbox">
+                        Is inside the city
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <p>How would you describe your current house?</p>
+                <textarea id="description" class="input-textarea" name="desctription" placeholder="Describe your house..."></textarea> 
+            </div>
+            <div class="form-group">
+                <button id="sumbit" class="sumbit-button" type="sumbit">Sumbit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
